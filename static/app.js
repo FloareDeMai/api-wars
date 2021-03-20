@@ -160,13 +160,13 @@ function displayPlanets(data) {
 
 nextButton.addEventListener('click', function (e) {
     page = page + 1
-    fetchPlanets(`http://swapi.dev/api/planets/?page=${page}`)
+    fetchPlanets(`https://swapi.dev/api/planets/?page=${page}`)
 
 })
 
 prevButton.addEventListener('click', function () {
     page = page - 1
-    fetchPlanets(`http://swapi.dev/api/planets/?page=${page}`)
+    fetchPlanets(`https://swapi.dev/api/planets/?page=${page}`)
 })
 
 closeModal.addEventListener("click", function (e) {
@@ -207,4 +207,4 @@ closeModal.addEventListener("click", function (e) {
 // })
 
 
-fetchPlanets(`http://swapi.dev/api/planets/?page=${page}`)
+fetchPlanets(`https://swapi.dev/api/planets/?page=${page}`)

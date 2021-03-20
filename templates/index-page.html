@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="container" id="planets-container">
+    <div class="modal hidden">
+        <div id="header"></div>
+        <button class="close-modal">&times;</button>
+        <header id="header-residents"></header>
+        <table id="residents-table">
+
+
+        </table>
+        <table id="statistics">
+
+        </table>
+
+    </div>
+    <div class="overlay hidden"></div>
+    <div class="table_buttons">
+        <button class="previous" disabled>Previous</button>
+        <button class="next">Next</button>
+    </div>
+    <table id="planets">
+    </table>
+</div>
+
+{% endblock %}

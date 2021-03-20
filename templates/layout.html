@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="header">
+    <div class="header-logo-wrapper">
+        <div class="about">
+            <div class="navbar-header"><h1 class="header-h1">Star Wars universe planets</h1></div>
+        </div>
+    </div>
+    <nav class="after-header">
+        <ul class="after-header-wrapper">
+            <li><a class="" href="{{ url_for('index_page') }}">Planet list</a></li>
+            <li><a href="" id="voting-statistics">Voting statistics</a></li>
+            {% if "username" not in session %}
+            <li><a href="{{ url_for('register_page') }}">Registration</a></li>
+            {% else %}
+            <li></li>
+            {% endif %}
+            <li><a href="{{ url_for('login_page') }}">Log In</a></li>
+            <li><a href="{{ url_for('logout') }}">Log out</a></li>
+            {% for message in get_flashed_messages() %}
+            <p class="alert-message">{{ message }}</p>
+            {% endfor %}
+            {% if 'username' in session %}
+            <li class="user_sign_in_as">Signed in as <span id="username">{{ session['username'] }}</span></li>
+            <input type="hidden" name="" id="user-id" value="{{ session['id'] }}">
+            {% else %}
+            <li class="user_sign_in_as"></li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
+{% block body %}
+{% endblock %}
+<script src="static/app.js"></script>
+</body>
+</html>

@@ -5,10 +5,10 @@ import psycopg2.extras
 
 def get_connection_string():
 
-    os.environ['PSQL_USER_NAME'] = 'flori'
-    os.environ['PSQL_PASSWORD'] = 'sticktogether'
-    os.environ['PSQL_HOST'] = 'localhost'
-    os.environ['PSQL_DB_NAME'] = 'apiwars'
+    os.environ['PSQL_USER_NAME'] = 'qlivddshxthsze'
+    os.environ['PSQL_PASSWORD'] = '285a731efc1aec209c7a3b51143688e435aa243e064f8b1cc0dbb37f652298d2'
+    os.environ['PSQL_HOST'] = 'ec2-52-71-161-140.compute-1.amazonaws.com'
+    os.environ['PSQL_DB_NAME'] = 'd6t4m8edivndrk'
 
     user_name = os.environ.get('PSQL_USER_NAME')
     password = os.environ.get('PSQL_PASSWORD')

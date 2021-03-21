@@ -8,7 +8,7 @@ const overlay = document.querySelector(".overlay");
 const closeModal = document.querySelector(".close-modal");
 const headerResidents = document.querySelector("#header-residents");
 let username = document.getElementById("username")
-let userId = document.querySelector("#user-id").value
+
 const votingStatistics = document.querySelector("#voting-statistics");
 const tableStatistics = document.querySelector("#statistics")
 
@@ -89,6 +89,7 @@ function displayPlanets(data) {
     voteButtons.forEach((butt, idx) => {
         butt.addEventListener('click', function (e){
             e.preventDefault()
+            let userId = document.querySelector("#user-id").value
             let planetId = e.target.id
             let planetName = e.target.id
             let newEntry = {
